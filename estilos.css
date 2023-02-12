@@ -1,0 +1,15 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+.cardMatriz{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.imagenPrincipal{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    
+}
