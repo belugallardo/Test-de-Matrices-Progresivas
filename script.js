@@ -1,102 +1,65 @@
-class Matriz {
-    constructor(nombre, urlPrincipal, urlUno, urlDos, urlTres, urlCuatro, urlCinco, urlSeis, respuestaCorrecta) {
+class Pacientes {
+    constructor(nombre, apellido, email){
         this.nombre = nombre;
-        this.urlPrincipal = urlPrincipal;
-        this.urlUno = urlUno;
-        this.urlDos = urlDos;
-        this.urlTres = urlTres;
-        this.urlCuatro = urlCuatro;
-        this.urlCinco = urlCinco;
-        this.urlSeis = urlSeis;
-        this.respuestaCorrecta = respuestaCorrecta;
+        this.apellido = apellido;
+        this.email = email;
     }
 }
+//Formulario en DOM
 
+const datosPacientes = document.getElementById("datosPacientes");
+    let div = document.createElement("div");
+    div.innerHTML = ` 
+                        <h1 class=contenedorPrincipal>Test de Matrices Progresivas</h1>
+                        <h2>¿Que es el test de matrices progresivas?</h2>
+                        <p class=textoPrincipal>El test de matrices progresivas de Raven es una prueba más que conocida y utilizada en el ámbito psicológico y psicopedagógico. Este test diseñado en 1938 por el psicólogo inglés John C. Raven, tenía el objetivo de calcular el factor “G” de inteligencia y su administración se restringió a los oficiales de la armada de Estados Unidos. El factor “G” de inteligencia hace referencia a la inteligencia general que condiciona cualquier ejecución o resolución de problemas, y es común a todas las habilidades que requieran de un componente intelectual. Este factor evidencia la habilidad de una persona a la hora de realizar un trabajo intelectual.
+                        La característica principal de esta prueba es la de incentivar el razonamiento análico, la percepción y la capacidad de abstracción. Además, al ser un test no verbal se sirve de la comparación entre formas y el razonamiento por analogías, sin la necesidad de que la persona precise de una cultura o conocimientos previos.</p>
+                        <h3>Caracteristicas de la prueba</h3>
+                        <p class=textoPrincipal>Existen una serie de características distintivas que han convertido esta prueba en una de las más utilizadas. Estas características se dan tanto a nivel de administración, como de objetivos y fiabilidad</p> 
+                        <p class=textoPrincipal> 1. Objetivo: Otro de los objetivos del Test de matrices Progresivas de Raven es el de medir la capacidad educativa de la persona.</p>
+                        <p class=textoPrincipal> 2. Material: Se trata de una prueba que utiliza series de figuras geometricas abstractas e incompletas que se presentan a la persona de manera gradual y con dificultad ascendente.</p>
+                        <p class=textoPrincipal> 3. Administración: Otra ventaja de esta prueba es que esta es susceptible a ser autoadministrada, asi como de administrarse tanto de manera individual como colectiva. </p>
+                        <p class=textoPrincipal> 4. Fiabilidad y validez: Esta prueba presenta un 0.87-0.81 de fiabilidad.</p>
+                    
+                    <h3>Completa tus datos para comenzar</h3>
+                    
+                    <form  id="formulario">
+                        <label class="formulario" for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre"><br><br>
 
-const a1 = new Matriz("A1", "img/a1.jpg", "img/a11.jpg", "img/a12.jpg", "img/a13.jpg", "img/a14.jpg", "img/a15.jpg", "img/a16.jpg", 4);
-const a2 = new Matriz("A2", "img/a2.jpg", "img/a21.jpg", "img/a22.jpg", "img/a23.jpg", "img/a24.jpg", "img/a25.jpg", "img/a26.jpg", 5);
-const a3 = new Matriz("A3", "img/a3.jpg", "img/a31.jpg", "img/a32.jpg", "img/a33.jpg", "img/a34.jpg", "img/a35.jpg", "img/a36.jpg", 1);
-const a4 = new Matriz("A4", "img/a4.jpg", "img/a41.jpg", "img/a42.jpg", "img/a43.jpg", "img/a44.jpg", "img/a45.jpg", "img/a46.jpg", 2);
-const a5 = new Matriz("A5", "img/a5.jpg", "img/a51.jpg", "img/a52.jpg", "img/a53.jpg", "img/a54.jpg", "img/a55.jpg", "img/a56.jpg", 6);
+                        <label class="formulario" for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido"><br><br>
 
-const arrayMatrices = [a1, a2, a3, a4];
+                        <label class="formulario" for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        
+                        <input class="botones" id=botonPaciente  type="submit" value="Comenzar la prueba">
+                        </form>
+                    `
+datosPacientes.appendChild(div);
 
-const contenedorMatrices = document.getElementById("contenedorMatriz");
+const formulario = document.getElementById("formulario");
 
-let contadorSelect = 0;
-arrayMatrices.forEach(matriz => {
-    const div = document.createElement("div");
-    div.innerHTML = `<h1> ${matriz.nombre}</h1>
-                    <div class=imagenPrincipal>
-                        <img src= "${matriz.urlPrincipal}">
-                    </div>                
-                    <div class= cardMatriz>
-                        <p> 1 </p>
-                        <img src= "${matriz.urlUno}">
-                        <p> 2 </p>
-                        <img src= "${matriz.urlDos}">
-                        <p> 3 </p>
-                        <img src= "${matriz.urlTres}">
-                    </div>
-                    <div class= cardMatriz>
-                        <p> 4 </p>
-                        <img src= "${matriz.urlCuatro}">
-                        <p> 5 </p>
-                        <img src= "${matriz.urlCinco}">
-                        <p> 6 </p>
-                        <img src= "${matriz.urlSeis}">
-                    </div>
-                    <div class=cardMatriz>
-                        <select id="select${contadorSelect}" name="select" >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
-                        <button id= boton> Enviar </button>
-                    </div>`;
-    contenedorMatrices.appendChild(div);
-    contadorSelect++;
-    
-})
+//Funcion boton enviar
+function enviar(event){
+    event.preventDefault();
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+    let email = document.getElementById("email").value;
 
-const respuestaCorrecta = [4, 5, 1, 2, 6];
-const respuestaUsuario = [];
-
-const boton = document.getElementById("boton");
-const select= document.getElementById("select");
-
-function miFuncion(){
-console.log("hola")
-let indice =respuestaUsuario.length;
-let seleccionado = parseInt( document.getElementById(`select${indice}`).value[0]);
-    console.log(seleccionado);
-    respuestaUsuario.push (seleccionado);
-    console.log (respuestaUsuario);
-    
+    const nuevoPaciente = new Pacientes (nombre,apellido,email);
+    //Convierto el nuevo Paciente en JSON
+    const pacienteJson = JSON.stringify(nuevoPaciente);
+//Guardo la cadena JSON en el localStorage
+    localStorage.setItem("nuevoPaciente", pacienteJson);
+    console.log (pacienteJson);
+    window.location.href = "matrices.html";
 }
 
-function comprobarRespuestas() {
-    let aciertos = 0;
-    for (let i = 0; i < respuestaUsuario.length; i++) {
-    if (respuestaUsuario[i] === respuestaCorrecta[i]) {
-        aciertos++;
-    }
-    }
-    console.log(`Tienes ${aciertos} respuestas correctas de ${respuestaUsuario.length}`);
-}
+//Recupero el objeto pacienteJson
+const pacienteJson = localStorage.getItem("nuevoPaciente");
+const paciente = JSON.parse(pacienteJson);
 
-boton.addEventListener("click", miFuncion);
-boton.addEventListener("click", comprobarRespuestas);
 
-const botones = document.querySelectorAll("#boton", "#select");
-for (let i = 0; i < botones.length; i++) {
-botones[i].addEventListener("click", miFuncion);
-botones[i].addEventListener("click", comprobarRespuestas);
-botones [i].addEventListener("click",function() {
-    this.disabled = true;
-    });
-}
-
+//Escuchador formulario
+formulario.addEventListener("submit", enviar);
