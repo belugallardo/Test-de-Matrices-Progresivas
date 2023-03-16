@@ -53,7 +53,7 @@ function enviar(event){
 //Guardo la cadena JSON en el localStorage
     localStorage.setItem("nuevoPaciente", pacienteJson);
     console.log (pacienteJson);
-    window.location.href = "../pages/matrices.html";
+    window.location.href = "./pages/matrices.html";
 }
 
 //Recupero el objeto pacienteJson
