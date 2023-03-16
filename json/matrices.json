@@ -1,0 +1,10 @@
+[
+    {"nombre": "A1","urlPrincipal": "../img/a1.jpg","urlUno": "../img/a11.jpg","urlDos": "../img/a12.jpg","urlTres":"../img/a13.jpg", "urlCuatro": "../img/a14.jpg","urlCinco": "../img/a15.jpg", "urlSeis": "../img/a16.jpg"},
+    {"nombre": "A2","urlPrincipal": "../img/a2.jpg","urlUno": "../img/a21.jpg","urlDos": "../img/a22.jpg","urlTres":"../img/a23.jpg", "urlCuatro": "../img/a24.jpg","urlCinco": "../img/a25.jpg", "urlSeis": "../img/a26.jpg"},
+    {"nombre": "A3","urlPrincipal": "../img/a3.jpg","urlUno": "../img/a31.jpg","urlDos": "../img/a32.jpg","urlTres":"../img/a33.jpg", "urlCuatro": "../img/a34.jpg","urlCinco": "../img/a35.jpg", "urlSeis": "../img/a36.jpg"},
+    {"nombre": "A4","urlPrincipal": "../img/a4.jpg","urlUno": "../img/a41.jpg","urlDos": "../img/a42.jpg","urlTres":"../img/a43.jpg", "urlCuatro": "../img/a44.jpg","urlCinco": "../img/a45.jpg", "urlSeis": "../img/a46.jpg"},
+    {"nombre": "A5","urlPrincipal": "../img/a5.jpg","urlUno": "../img/a51.jpg","urlDos": "../img/a52.jpg","urlTres":"../img/a53.jpg", "urlCuatro": "../img/a54.jpg","urlCinco": "../img/a55.jpg", "urlSeis": "../img/a56.jpg"},
+    {"nombre": "A6","urlPrincipal": "../img/a6.jpg","urlUno": "../img/a61.jpg","urlDos": "../img/a62.jpg","urlTres":"../img/a63.jpg", "urlCuatro": "../img/a64.jpg","urlCinco": "../img/a65.jpg", "urlSeis": "../img/a66.jpg"},
+    {"nombre": "A7","urlPrincipal": "../img/a7.jpg","urlUno": "../img/a71.jpg","urlDos": "../img/a72.jpg","urlTres":"../img/a73.jpg", "urlCuatro": "../img/a74.jpg","urlCinco": "../img/a75.jpg", "urlSeis": "../img/a76.jpg"},
+    {"nombre": "A8","urlPrincipal": "../img/a8.jpg","urlUno": "../img/a81.jpg","urlDos": "../img/a82.jpg","urlTres":"../img/a83.jpg", "urlCuatro": "../img/a84.jpg","urlCinco": "../img/a85.jpg", "urlSeis": "../img/a86.jpg"} 
+]
