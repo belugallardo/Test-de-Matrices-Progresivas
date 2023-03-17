@@ -47,10 +47,15 @@ function enviar(event){
     let apellido = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
 
+    if(nombre === "" || apellido === "" || email === ""){
+        Swal.fire("Por favor complete todos los campos del formulario");
+        return;
+    }
+
     const nuevoPaciente = new Pacientes (nombre,apellido,email);
     //Convierto el nuevo Paciente en JSON
     const pacienteJson = JSON.stringify(nuevoPaciente);
-//Guardo la cadena JSON en el localStorage
+    //Guardo la cadena JSON en el localStorage
     localStorage.setItem("nuevoPaciente", pacienteJson);
     window.location.href = "./pages/matrices.html";
 }
