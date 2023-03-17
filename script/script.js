@@ -47,10 +47,15 @@ function enviar(event){
     let apellido = document.getElementById("apellido").value;
     let email = document.getElementById("email").value;
 
-    if(nombre === "" || apellido === "" || email === ""){
+    if(nombre.trim().length === 0 || apellido.trim().length === 0 || email.trim().length === 0){
         Swal.fire("Por favor complete todos los campos del formulario");
         return;
     }
+
+    // if(nombre === "" || apellido === "" || email === ""){
+    //     Swal.fire("Por favor complete todos los campos del formulario");
+    //     return;
+    // }
 
     const nuevoPaciente = new Pacientes (nombre,apellido,email);
     //Convierto el nuevo Paciente en JSON
