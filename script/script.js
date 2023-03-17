@@ -52,10 +52,6 @@ function enviar(event){
         return;
     }
 
-    // if(nombre === "" || apellido === "" || email === ""){
-    //     Swal.fire("Por favor complete todos los campos del formulario");
-    //     return;
-    // }
 
     const nuevoPaciente = new Pacientes (nombre,apellido,email);
     //Convierto el nuevo Paciente en JSON
