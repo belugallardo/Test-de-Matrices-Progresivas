@@ -1,9 +1,9 @@
 let resultadoLocalStorage = localStorage.getItem("aciertos")
 
 const personaJSON = localStorage.getItem("nuevoPaciente");
-console.log (personaJSON);
+// console.log (personaJSON);
 const persona = JSON.parse(personaJSON);
-console.log(persona);
+// console.log(persona);
 
 function comenzarNuevo(){
     window.location.href = "../index.html";

@@ -52,7 +52,7 @@ function enviar(event){
     const pacienteJson = JSON.stringify(nuevoPaciente);
 //Guardo la cadena JSON en el localStorage
     localStorage.setItem("nuevoPaciente", pacienteJson);
-    console.log (pacienteJson);
+    // console.log (pacienteJson);
     window.location.href = "./pages/matrices.html";
 }
 
