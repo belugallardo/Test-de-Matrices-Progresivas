@@ -52,6 +52,7 @@ async function mostrarMatrices(){
             boton.addEventListener("click", miFuncion);
             boton.addEventListener("click", comprobarRespuestas);
             boton.addEventListener("click", function(){
+                totalSeleccionado++;
                 this.disabled=true;
             });
             boton.addEventListener("click", () => {
@@ -64,7 +65,6 @@ async function mostrarMatrices(){
             })
 
             select.addEventListener ("change", function(){
-                totalSeleccionado++;
                 boton.disable=false;
             });
         })
